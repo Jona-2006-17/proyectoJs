@@ -1,0 +1,503 @@
+
+/*NAVBAR*/
+.navbar-toggler{
+    color: green;
+    background-color: rgba(255, 255, 255, 0.815);
+}
+.navbar2{
+    /* background: #13572f;  */
+    /* background: #083c1e;  */
+    background: #083c1e;
+}
+.navbar2 i strong{
+    margin-left: 0.1rem;
+}
+.navbar a{
+    text-transform: none;
+    color: white;
+    transition: 0.25s ease;
+}
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+ul:hover a{
+    color: #fafafa65;
+}
+ul:hover a:hover{
+    color: #a9ff92;
+    box-shadow: 0 2px 0 0 currentColor;
+    text-shadow: 0 0 5px rgb(146, 255, 146),
+    0 0 25px rgb(146, 255, 146), 0 0 50px rgb(146, 255, 146), 
+    0 0 100px rgb(146, 255, 146), 0 0 200px rgb(146, 255, 146);
+}
+.navbar .buscador:hover{
+    box-shadow: 0 0 5px rgb(146, 255, 146),
+    0 0 25px rgb(146, 255, 146), 0 0 50px rgb(146, 255, 146), 
+    0 0 100px rgb(146, 255, 146), 0 0 200px rgb(146, 255, 146);
+}
+nav .logos_menu, .logo{
+    display: none;
+}
+
+.carousel-inicio, .sectionTITULO{
+    margin-top: 8.25rem;
+}
+.carousel-inicio img{
+    filter: brightness(80%);
+}
+
+/*WELCOME INICIO*/
+.info_adi i, .iluminacion{ 
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: red; 
+    text-shadow: 0 0 5px rgb(255, 146, 146),
+    0 0 25px rgb(255, 146, 146), 0 0 50px rgb(255, 146, 146), 
+    0 0 100px rgb(255, 146, 146), 0 0 200px rgb(255, 146, 146);
+}
+
+/*CARTAS ANIMADAS*/
+.fondo{
+    background-image: url(../img/pexels-rovenimages-com-344613-949587.jpg);
+    background-attachment:initial;
+    background-size: cover;
+    } 
+.cartas{
+    width: 100%;
+    display: flex;
+    padding-top: 2rem;
+}
+.cartas .carta{
+    position: relative; /*No perder dimensiones*/
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+.cartas .carta img{
+    border-radius: 10px;
+    width: 300px; 
+    height:335px;
+    /*       EJE  X  Y  DIFUMINADO*/
+    box-shadow: -3px 0 10px rgb(0, 0, 0, 0.3), -4px 0 10px rgb(0, 0, 0, 0.2), -5px 0 10px rgb(0, 0, 0, 0.1);
+}
+.cartas .carta img:hover{
+    box-shadow: 0 0 5px rgb(224, 101, 0),
+    0 0 25px rgb(224, 101, 0), 0 0 50px rgb(224, 101, 0), 
+    0 0 100px rgb(224, 101, 0), 0 0 200px rgb(224, 101, 0); 
+    /* box-shadow: 0 0 5px rgb(19, 224, 0),
+    0 0 25px rgb(19, 224, 0), 0 0 50px rgb(19, 224, 0), 
+    0 0 100px rgb(19, 224, 0), 0 0 200px ; */
+}
+.cartas .carta:hover {
+    margin-right: 80px;
+    transform: rotate(3deg) translateY(-15px);
+}
+/*[]<-ESTILO para buscar que la clase tenga al menos rotación*/
+.cartas .carta[class*="rotación"]{
+    margin-left: -100px;
+}
+.rotación-1:hover,
+.rotación-2:hover{
+    margin-left: -130px;
+}
+
+/*PRODUCTOS*/
+.tamaño{
+    font-size: 0.9em;
+    margin-top: 1px;
+    margin-bottom: -1px;
+    padding: 0 3px;
+}
+.productos2{
+    width: 180px;
+    margin: 0 auto;
+}
+.linea{
+    text-decoration: line-through;
+    color: gray;
+}
+.imagenes{
+    width: 50px;
+}
+.imagenes4{
+    width: 70px;
+
+}
+.imagenes3{
+    width: 40px;
+}
+    
+.text-productos{
+    margin-left: 7.4rem;
+}
+.decoraciones{
+    width: 100%; /* La imagen ocupará todo el ancho de la carta */
+    max-height: 180px; /* Define una altura fija */
+    border-radius: 3px; /* Opcional: bordes redondeados */
+}
+.card a{
+    display: block; /* Hace que el enlace ocupe todo el ancho */
+    width: 100%;
+    text-decoration: none;
+}
+
+
+/*COLLAGES*/
+.collage1{
+    background-image: url('../img/collage1.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 308px;
+    transition: 0.25s ease;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3), -4px 0 10px rgb(0, 0, 0, 0.2), -5px 0 10px rgb(0, 0, 0, 0.1);
+
+}
+.collage2{
+    background-image: url('..//img/collage2.avif');
+    background-size: cover;
+    height: 150px;
+    transition: 0.25s ease;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3), -4px 0 10px rgb(0, 0, 0, 0.2), -5px 0 10px rgb(0, 0, 0, 0.1);
+    background-position: center;
+
+}
+.collage3{
+    background-image: url('..//img/collage3.jpg');
+    background-size: cover;
+    height: 150px;
+    transition: 0.25s ease;
+    background-position: center;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3), -4px 0 10px rgb(0, 0, 0, 0.2), -5px 0 10px rgb(0, 0, 0, 0.1);
+
+}
+.collage4{
+    background-image: url('..//img/collage4.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    transition: 0.25s ease;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3), -4px 0 10px rgb(0, 0, 0, 0.2), -5px 0 10px rgb(0, 0, 0, 0.1);
+
+}
+.collage2:hover,
+.collage3:hover,
+.collage4:hover,
+.collage1:hover{
+    transform: scale(1.02);
+
+}
+/*COPITOS NIEVE*/
+#nieve{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.snowflake{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0.8;
+    /*Linear es el tipo de animación, en este caso linear porque no queremos ninguna aceleración al principio ni al final
+    El 1 es para decir cuantas veces se repite, ahorita va a ser uno por el listener de q cuando se termine que se elimine 
+    ese copo y crea uno nuevo en js*/
+    animation: caidaCopito linear 1;
+}
+
+/*Definir secuencia de estilos que se aplica a un elemento durante una animación*/
+@keyframes caidaCopito {
+    0% {
+        transform: translateX(0) translateY(-10vh) rotate(0deg);
+    }
+    50% {
+        transform: translateX(20px) translateY(50vh) rotate(180deg);
+    }
+    100% {
+        transform: translateX(-20px) translateY(110vh) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+/*SISTEMA MENSAJES*/
+#app .comment-container{
+    border: solid 1px #91a8c2;
+    border-radius: 5px;
+    padding: 10px; /*Este es el que me da ese efecto de corrido en cada mensaje q se responde asi mismo*/
+    color: white;
+    background-color: #1e2f41;
+}
+
+.resposes-container{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.resposes-container .comment-container{
+    background-color: #4e5a66;
+    color: white;
+}
+
+.comment-container .input{
+    padding: 5px 15px;
+    border: solid 1px #ccc;
+    border-radius: 15px;
+    margin: 5px 0;
+}
+
+.comment-container button{
+    border-radius: 5px;
+    border: none;
+    background-color: #eee;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.comment-container button:hover{
+    background-color: #1c6fc2;
+    color: white;
+}
+/*SISTEMA DE RANTING*/
+
+.rating{
+    display: flex;
+    justify-content: left;
+
+}
+.item{
+    background-color: #eee;
+    -webkit-mask-image: url('./star.svg');
+    mask-image: url('./star.svg');
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.item-full{
+    background-color: yellow ;
+}
+
+/*SECCIÓN DPRODUCTOS*/
+.text-productos{
+    margin-left: 7.4rem;
+}
+.tamaño{
+    font-size: 0.9em;
+    margin-top: 1px;
+    margin-bottom: -1px;
+    padding: 0 3px;
+}
+.productos2{
+    width: 180px;
+    margin: 0 auto;
+}
+.product{
+    margin: 0;
+}
+.margen{
+    margin-left: 150px;
+}
+.celular{
+    display: none;
+}
+.card{
+    transform: scale(0.8);
+}
+@media (max-width: 1102px){
+    .desa{
+        display: none;
+    }
+    .titu{
+        margin-left: 150px;
+    }
+    
+
+}
+
+@media (max-width: 980px){
+
+    .carousel-control-next, .carousel-control-prev{
+        bottom: 100%;
+    }
+    .carousel-item{
+        margin-top: 40px;
+        
+    }
+}
+@media (max-width: 765px){
+
+    .carousel-control-next, .carousel-control-prev{
+        display: none;
+    }
+    .desa{
+        display: block;
+    }
+    .carta{
+        margin-top: 1em;
+        transform: scale(0.8);
+        transition: 0.3s;
+    }
+}
+
+@media  (max-width: 320px){
+    .carta{
+        transform: scale(0.6);
+        transition: 0.3s;
+        margin-left: -15px;
+    }
+    .carruselDesa{
+        display: none;
+        
+    }
+    .celular{
+        display: flex;
+    }
+
+    .desa{
+        display: block;
+    }
+    .desa2{
+        display: none;
+    }
+    .row2{
+        margin-top: -120px;
+    }
+}
+
+/*ENTRADA DECORACIONES*/
+.iluminacion2{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(0, 0, 0); 
+    text-shadow: 0 0 5px gray,
+    0 0 25px gray, 0 0 50px gray, 
+    0 0 100px gray, 0 0 200px gray;
+}
+.sectionTITULO{
+    background-color: rgb(238, 238, 238);
+}
+.sectionTITULO .ayudaTITULO{
+    margin: 0 2rem 0 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.sectionTITULO .ayudaTITULO img{
+    width: 80px;
+}
+.textu{
+    margin-left: 0.5rem;
+}
+
+/*INFORMACIÓN DE OFERTAS*/
+.vermaaas:hover{
+    cursor: pointer;
+    background-color: rgba(0, 132, 255, 0.705);
+    border: rgba(0, 132, 255, 0.815) solid;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3), -4px 0 10px rgb(0, 0, 0, 0.2), -5px 0 10px rgb(0, 0, 0, 0.1);
+    
+}
+.tangerine-regular {
+    font-family: "Shadows Into Light Two", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*CARTEL*/
+.cartelitoaaa{
+    background-color: #0a6369;
+}
+.cartelito2{
+    background-color: #d1c493; /*#D5C58A*/
+    color: black;
+}
+.cartelito{
+    background-color: ffe800;
+    color: white;
+}
+.iluminacion3{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    color: #083c1e;
+    font-style: normal;
+    text-shadow: 0 0 5px  #a9ff92,
+    0 0 25px  #a9ff92, 0 0 50px  #a9ff92, 
+    0 0 100px  #a9ff92, 0 0 200px  #a9ff92;
+}
+.iluminacion4{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    color: rgb(15, 69, 185);
+    font-style: normal;
+    text-shadow: 0 0 5px  #9294ff,
+    0 0 25px  #9294ff, 0 0 50px  #9294ff, 
+    0 0 100px  #9294ff, 0 0 200px  #9294ff;
+}
+.iluminacion5{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    color: orangered;
+    font-style: normal;
+    text-shadow: 0 0 5px  #ff8f45,
+    0 0 25px  #ff8f45, 0 0 50px  #ff8f45, 
+    0 0 100px  #ff8f45, 0 0 200px  #ff8f45;
+}
+.iluminacion6{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    color: rgb(0, 38, 63);
+    font-style: normal;
+    text-shadow: 0 0 5px  #8cbeff,
+    0 0 25px  #8cbeff, 0 0 50px  #8cbeff, 
+    0 0 100px  #8cbeff, 0 0 200px  #8cbeff;
+}
+.texto1{
+    background-image: url(../img/Light\ bulbs\ over\ dark\ texture.png);
+    background-size: cover;
+    background-position:left;
+}
+.hi i{
+    color: rgb(255, 230, 0);
+}
+.cartelito img{
+    filter: brightness(120%);
+}
+
+.cartelito .row, .col{
+    border: red ;
+}
+.cartelito .peludo img{
+    border: red ;
+    margin-right: 3em;
+}
+@media (max-width: 411px){
+    .responsiveCEL{
+        transform: scale(0.2);
+        transition: 0.3s;
+    }
+    .grande{
+        display: none;
+    }
+    
+}
+@media (max-width: 600px){
+    .bienvenida{
+        margin-top: 8.25rem;
+    }
+    .colInfoADI{
+        border-top: 0.5px rgb(196, 196, 196) solid;
+        padding-top: 2em;
+    }
+    
+};
+
+
+

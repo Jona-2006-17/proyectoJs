@@ -1,5 +1,5 @@
 // lista de los objetos que se pueden buscar
-const items = ['nomo', 'arbolito', 'juguetes', 'huacales', 'disfrases', 'sueters', 'pastel', 'galletas'];
+const items = ['nomo', 'arbolito', 'juguetes', 'huacales', 'disfraces', 'sueters', 'pastel', 'galletas'];
 const buscador = document.getElementById('buscador');
 const lista = document.getElementById('lista');
 
@@ -24,7 +24,7 @@ buscador.addEventListener('input', ()=>{
                 if(item == 'juguetes' || item == 'huacales'){
                     a.href = 'regalos.html'
                 }
-                if(item == 'disfrases' || item == 'sueters'){
+                if(item == 'disfraces' || item == 'sueters'){
                     a.href = 'ropa.html'
                 }
                 if(item == 'pastel' || item == 'galletas'){

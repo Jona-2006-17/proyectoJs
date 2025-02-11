@@ -31,22 +31,23 @@ document.querySelectorAll('.item'). forEach(item=>{
         document.querySelectorAll('.item').forEach((it) =>{
             //classList.contains:  comprobar si un elemento tiene una clase específica.
             if(it.classList.contains('item-full')){
-                it.classList.remove("item-full")
+                it.classList.remove("item-full")//remueve la clase para q cuando pase el mouse no se queden todas las estrellas llenitas
             }
         });
 
+        // Añadimos la clase 'item-full' hasta la estrella en la posición 'pos' para resaltarlas
         for(let i = 0; i <= pos; i++){        //     item-posición i
             const square = document.querySelector(`.item-${i}`);
-            if(!square.classList.contains("item-full")){
+            if(!square.classList.contains("item-full")){ //Comprobar si la estrella ya está resaltada
                 square.classList.add("item-full");
             }
         }
-        currentValue = parseInt(pos) + 1;
+        currentValue = parseInt(pos) + 1;//Actualizar el valor de la calificación
     });
 
     item.addEventListener('click', (e) =>{
-        const pos = item.getAttribute('data-pos');
-        currentValue = parseInt(pos) +1;
+        const pos = item.getAttribute('data-pos'); //Captura posición del div
+        currentValue = parseInt(pos) +1; //actualiza el Valor Actual de las estrellitas
         console.log(currentValue);
     })
 });

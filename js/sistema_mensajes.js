@@ -1,8 +1,7 @@
-const comments = []; //Guardar información, cada objeto va a tener su arreglo para guardar replicas/respuestas
-
+const comments = []; // Arreglo que almacena los comentarios principales. Cada comentario puede tener respuestas dentro de un arreglo 'responses'.
 //Crear Elementos
 const inputContainer = document.createElement('div');
-const input = document.createElement ('input'); //más ademante lo vamos a clonar y asignar eventos
+const input = document.createElement ('input'); // Creamos el campo de entrada para escribir comentarios, lo clonaremos más adelante para respuestas
 const commentsContainer = document.querySelector("#comments-container") //capturar elemento
 
 input.classList.add('input')//adicionar clase
@@ -22,13 +21,13 @@ function handleEnter(evento, current){
         const newComment={
             text: evento.target.value,
             likes: 0,
-            responses: [] //cuando quiera responder a un mensaje o hacer una replica me lo va a guardar en el arreglo
+            responses: [] // Cuando quiera responder a un comentario o hacer una réplica, se guardará en este arreglo
         }
         if(current===null){
             comments.unshift(newComment); //Si current es null, significa que estamos agregando un comentario principal, por lo que lo agregamos al principio del array comments utilizando unshift()
             //console.log(comments) 
         }else{
-            current.responses.unshift(newComment); //Si current no es null, significa que estamos respondiendo a un comentario existente. En este caso, se agrega el nuevo comentario dentro de la propiedad responses del comentario principal.
+            current.responses.unshift(newComment); // Si current no es null, estamos respondiendo a un comentario existente
             //console.log(current.responses)
         }
         evento.target.value = ""; 
@@ -40,12 +39,15 @@ function handleEnter(evento, current){
 
 function renderComments(arreglo, parentComments){
     arreglo.forEach(element => {
+
+        // Creamos los contenedores para el comentario y sus respuestas
         const commentContainer = document.createElement('div');
         commentContainer.classList.add('comment-container');
 
         const responsesContainer = document.createElement('div'); 
         responsesContainer.classList.add('resposes-container');
 
+        // Creamos los botones de m egusta y responder
         const replyButton = document.createElement('button');
         const likeButton = document.createElement('button');
         
@@ -53,7 +55,7 @@ function renderComments(arreglo, parentComments){
         textContainer.textContent = element.text;
 
         const actionsContainer = document.createElement('div')
-        replyButton.textContent = 'Reply'; 
+        replyButton.textContent = 'Responder'; 
         likeButton.textContent = `${element.likes > 0? `${element.likes} likes`: 'like'}`;
 
         replyButton.addEventListener('click', evento =>{
@@ -62,13 +64,13 @@ function renderComments(arreglo, parentComments){
             newInput.value = ''; //lo colocamos en vacio por si el input inicial esta lleno, recuerda q estamos copiando todo
             newInput.focus(); 
             newInput.addEventListener('keydown', evento => {
-                handleEnter(evento, element); 
+                handleEnter(evento, element);  // Responder al comentario actual
             });
-            commentContainer.insertBefore(newInput, responsesContainer)
+            commentContainer.insertBefore(newInput, responsesContainer)  // Insertamos el nuevo input antes de las respuestas
         });
 
         likeButton.addEventListener('click', evento =>{
-            element.likes++;
+            element.likes++; // Incrementamos el contador de likes
             likeButton.textContent = `${element.likes > 0? `${element.likes} likes`: 'like'}`;
         });
 

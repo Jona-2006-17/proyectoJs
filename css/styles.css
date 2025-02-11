@@ -223,7 +223,7 @@ nav .logos_menu, .logo{
 }
 
 /*SISTEMA MENSAJES*/
-#app .comment-container{
+.app .comment-container{
     border: solid 1px #91a8c2;
     border-radius: 5px;
     padding: 10px; /*Este es el que me da ese efecto de corrido en cada mensaje q se responde asi mismo*/
@@ -477,7 +477,27 @@ nav .logos_menu, .logo{
 .cartelito .peludo img{
     border: red ;
     margin-right: 3em;
+
 }
+
+@media (max-width: 990px){
+    .carousel-inicio{
+        margin-top: 5.7rem;
+    }
+}
+
+@media (max-width: 600px){
+    .bienvenida{
+        margin-top: 8.25rem;
+        border-bottom: 1px rgb(99, 99, 99) solid;
+    }
+    .colInfoADI{
+        border-top: 0.5px rgb(196, 196, 196) solid;
+        padding-top: 2em;
+    }
+    
+};
+
 @media (max-width: 411px){
     .responsiveCEL{
         transform: scale(0.2);
@@ -486,18 +506,11 @@ nav .logos_menu, .logo{
     .grande{
         display: none;
     }
-    
 }
-@media (max-width: 600px){
-    .bienvenida{
-        margin-top: 8.25rem;
-    }
-    .colInfoADI{
-        border-top: 0.5px rgb(196, 196, 196) solid;
-        padding-top: 2em;
-    }
-    
-};
+
+
+
+
 
 
 

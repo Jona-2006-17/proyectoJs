@@ -1,4 +1,5 @@
 const ContainerCopos = document.querySelector(".Nievee");
+console.log(ContainerCopos);
 function createSnowflake() {
 /*Normalmente cuando capturamos un elemento del HTML utilizamos createElement, en este caso utilizamos 
 createElementnS pero es porque el elemento SVG que utilizamos no es propio, nativo del HTML sino que es 
@@ -25,7 +26,7 @@ En Js es necesario especificar el namespace para que el Js pueda entender y mani
     //snowflake.style.animationDuration Establece la duración de la animación (En este caso velocidad) del copito de nieve de manera aleatoria, entre 5 y 10 segundos para que cada copo de nieve caiga a diferente velocidad
     snowflake.style.animationDuration = Math.random() * 5 + 5 + "s";  
     //Especifica el tiempo de retraso antes de que comience la animación 
-    snowflake.animationDelay = Math.random() * 5 + "s"; //Agregamos un Delay a la animación para que cada copo caiga de manera aleatoria
+    snowflake.style.animationDelay = Math.random() * 5 + "s"; //Agregamos un Delay a la animación para que cada copo caiga de manera aleatoria
 
     // SVG del copo de nieve, diseño del SVG
     snowflake.innerHTML = `

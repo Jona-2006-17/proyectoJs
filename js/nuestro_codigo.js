@@ -88,7 +88,7 @@ const carrito = {
                 }
             }else{
                 // si no se encuentra en el carrito se agrega con el .push
-                carrito.items.push({id, qty});
+                carrito.items.push({id, qty}); 
             }
             // se llama el metodo .save() para guardar el carrito actualizado en localStore
             carrito.methods.save()
@@ -102,10 +102,11 @@ const carrito = {
             // si sí es asi se le reduce esa cantidad al producto en el carrito
             // si no se el .filter crea un nuevo array o una nueva version sin el id de ese 
             // producto quedando "eliminado" 
-            if(cartItem.qty -qty > 0){
+            if(cartItem.qty - qty > 0){
                 cartItem.qty -= qty;
             }else{
                 carrito.items = carrito.items.filter(item => item.id != id)
+                
             };
             // se llama el metodo .save() para guardar el carrito actualizado en localStore
             carrito.methods.save();
@@ -118,7 +119,7 @@ const carrito = {
         },
         // este metodo busca en el carrito un producto mediante un indice con el id especificado 
         // luego valida si es mayor o igual a 0 es porq si existe si no devuelve null 
-        get: (id) => {
+        get: (id) => { 
             const index = carrito.items.findIndex(item => item.id == id);
             return index >= 0 ? carrito.items[index] : null;
         },
@@ -153,6 +154,7 @@ const carrito = {
         }
     }
 };
+
 // ejecuta la funcion render carrito una vez que el documento HTML a sido completamente cargado
 document.addEventListener('DOMContentLoaded', () => {
     renderCarrito();
